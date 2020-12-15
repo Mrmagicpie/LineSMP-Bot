@@ -25,6 +25,10 @@ async def get_prefix(bot, message):
 #
 bot = commands.Bot(command_prefix=get_prefix, intents=discord.Intents.all())
 bot.remove_command('help')
+
+os.environ["JIKASHU_NO_UNDERSCORE"] = "True"
+os.environ["JIKASHU_HIDE"] = "True"
+bot.load_extension('jishaku')
 #
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
